@@ -25,12 +25,9 @@ const App = () => {
   }
 
   const updateCard = () => {
-    if (currentCard < cards.length - 1) {
-    setCurrentCard(currentCard + 1);
-  } else {
-    setCurrentCard(0);
-  }
-  setIsFlipped(false);
+    const randomIndex = Math.floor(Math.random() * cards.length);
+      setCurrentCard(randomIndex);
+      setIsFlipped(false);
   }
 
   return (
